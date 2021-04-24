@@ -56,7 +56,7 @@ void vivreEtMourir(int tab[LARGEUR][LONGUEUR], int tab2[LARGEUR][LONGUEUR], int 
     {
         for(int j = 1; j < LONGUEUR-1; j++)
         {
-            temp = 0; //pk on importe temp si on le met a 0 directement dans la fonction
+            temp = 0; 
 
             if(tab[i][j] == TRUE)
             
