@@ -3,8 +3,7 @@
 //Fait par Omar BENZEROUAL
 //En classe de Pré Ingé 1
 
-#define LARGEUR 20
-#define LONGUEUR 60
+
 #define TRUE 1
 #define FALSE 0
 
@@ -15,42 +14,69 @@
 #include "jeuDeLaVie.h"
 
 
-void afficher(int tab[LARGEUR][LONGUEUR])
+int** Allouer(int largeur, int longueur)
 {
-    for(int i = 0; i < LARGEUR; i++)
+    int** tab;
+    tab = malloc(largeur *sizeof(int*));
+    for (int i = 0; i < largeur; i++)
     {
-        for(int j = 0; j < LONGUEUR; j++)
+        tab[i]= malloc(longueur * sizeof(int));
+    }
+    return tab;
+
+}
+
+
+
+
+void Initialisation(int** tab, int largeur, int longueur)
+{
+    for (int i = 0; i < largeur; i++)
+    {
+        for (int j = 0; j < longueur; j++)
         {
-            if(j == LONGUEUR-1)
+            tab[i][j] = 0;
+        }
+        
+    }
+
+}
+
+
+void Libere (int** tab, int largeur, int longueur)
+{
+
+    for (int i = 0; i < largeur; i++)
+    {
+        free(tab[i]);
+        
+    }
+    free(tab);
+}
+
+
+
+void afficher(int** tab, int largeur, int longueur)
+{
+    for(int i = 0; i < largeur; i++)
+    {
+        for(int j = 0; j < longueur; j++)
+        {
+            if(tab[i][j] == 1)
             {
-                if(tab[i][j] == 1)
-                {
-                    printf("\033[0;34m");
-                    printf("•\n");
-                }
-                else
-                {
-                    printf("\033[0;31m");
-                    printf("•\n");
-                } 
+                printf("\033[0;34m");
+                printf("•");
             }
             else
             {
-                if(tab[i][j] == 1)
-                {
-                    printf("\033[0;34m");
-                    printf("•");
-                }
-                else
-                {
-                    printf("\033[0;31m");
-                    printf("•");
-                }
+                printf("\033[0;31m");
+                printf("•");
             }
+            printf("\n");
         }
     }
 }
-
+/*
 void vivreEtMourir(int tab[LARGEUR][LONGUEUR], int tab2[LARGEUR][LONGUEUR])
 {
     for(int i = 1; i < LARGEUR-1; i++)
@@ -120,5 +146,7 @@ void copyTab(int tab[LARGEUR][LONGUEUR], int tab2[LARGEUR][LONGUEUR])
     }
 }
 
+
+*/
 
 
