@@ -6,3 +6,7 @@ jeuDeLaVie.o: jeuDeLaVie.c jeuDeLaVie.h
 
 main.o: main.c jeuDeLaVie.h
 	gcc -c main.c -o main.o
+
+clear: exe
+	rm -f *.o
+	@echo "tout a été éffacé"
