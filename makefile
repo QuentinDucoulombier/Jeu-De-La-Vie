@@ -1,8 +1,8 @@
-exe: puissance4.o main.o
-	gcc puissance4.o main.o -o exe
+exe: jeuDeLaVie.o main.o
+	gcc jeuDeLaVie.o main.o -o exe
 
-puissance4.o: puissance4.c puissance4.h
-	gcc -c puissance4.c  -o puissance4.o
+jeuDeLaVie.o: jeuDeLaVie.c jeuDeLaVie.h
+	gcc -c jeuDeLaVie.c  -o jeuDeLaVie.o
 
-main.o: main.c puissance4.h
+main.o: main.c jeuDeLaVie.h
 	gcc -c main.c -o main.o
