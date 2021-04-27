@@ -72,16 +72,16 @@ void afficher(int** tab, int largeur, int longueur)
                 printf("\033[0;31m");
                 printf("•");
             }
-            printf("\n");
         }
+        printf("\n");
     }
 }
-/*
-void vivreEtMourir(int tab[LARGEUR][LONGUEUR], int tab2[LARGEUR][LONGUEUR])
+
+void vivreEtMourir(int** tab, int** tab2, int largeur, int longueur)
 {
-    for(int i = 1; i < LARGEUR-1; i++)
+    for(int i = 1; i < largeur-1; i++)
     {
-        for(int j = 1; j < LONGUEUR-1; j++)
+        for(int j = 1; j < longueur-1; j++)
         {
             int temp = 0;
             if(tab[i][j] == TRUE)
@@ -135,18 +135,16 @@ void vivreEtMourir(int tab[LARGEUR][LONGUEUR], int tab2[LARGEUR][LONGUEUR])
 }
 
 
-void copyTab(int tab[LARGEUR][LONGUEUR], int tab2[LARGEUR][LONGUEUR])
+void copyTab(int** tab, int** tab2, int largeur, int longueur)
 {
-    for(int i = 0; i < LARGEUR; i++)
+    for(int i = 0; i < largeur; i++)
     {
-        for(int j = 0; j < LONGUEUR; j++)
+        for(int j = 0; j < longueur; j++)
         {
             tab[i][j] = tab2[i][j];
         }
     }
 }
 
-
-*/
 
 
