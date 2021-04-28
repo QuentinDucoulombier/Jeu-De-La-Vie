@@ -16,14 +16,12 @@
 
 int** Allouer(int largeur, int longueur)
 {
-    int** tab;
-    tab = malloc(largeur *sizeof(int*));
+    int** tab = malloc(largeur *sizeof(int*));
     for (int i = 0; i < largeur; i++)
     {
         tab[i]= malloc(longueur * sizeof(int));
     }
     return tab;
-
 }
 
 
@@ -37,19 +35,15 @@ void Initialisation(int** tab, int largeur, int longueur)
         {
             tab[i][j] = 0;
         }
-        
     }
-
 }
 
 
 void Libere (int** tab, int largeur, int longueur)
 {
-
     for (int i = 0; i < largeur; i++)
     {
         free(tab[i]);
-        
     }
     free(tab);
 }

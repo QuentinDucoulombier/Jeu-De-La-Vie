@@ -11,11 +11,8 @@ int main()
     int largeur = 20;
     int longueur = 60;
 
-    int **tabJeu = NULL;
-    int **tabTemp = NULL;
-
-    tabJeu = Allouer(largeur, longueur);
-    tabTemp = Allouer(largeur, longueur);
+    int **tabJeu = Allouer(largeur, longueur);
+    int **tabTemp = Allouer(largeur, longueur); 
 
     Initialisation(tabJeu, largeur, longueur);
     Initialisation(tabTemp, largeur, longueur);
