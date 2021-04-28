@@ -10,6 +10,10 @@ int main()
 {
     int largeur = 20;
     int longueur = 60;
+    int nombreDeTours;
+    int k = 0;
+
+    Tours(&nombreDeTours);
 
     int **tabJeu = Allouer(largeur, longueur);
     int **tabTemp = Allouer(largeur, longueur); 
@@ -25,21 +29,40 @@ int main()
 
     
 
-    printf("Le jeu va commencer !! \nAppuyez sur ctrl+C pour arrêter le jeu. \n\n\nC'EST PARTI !");
+    printf("\nLe jeu va commencer !! \nAppuyez sur ctrl+C pour arrêter le jeu. \n\n\nC'EST PARTI !");
     sleep(1);
 
-    while (1)
+    if(nombreDeTours > 0)
     {
-        copyTab(tabTemp, tabJeu, largeur, longueur);
-        sleep(1);
-        printf("\033[2J");
-        printf("\033[H");
-        afficher(tabJeu, largeur, longueur);
-        vivreEtMourir(tabTemp, tabJeu, largeur, longueur);
+        for(int i = 0; i < nombreDeTours; i++)
+        {
+            copyTab(tabTemp, tabJeu, largeur, longueur);
+            sleep(1);
+            printf("\033[2J");
+            printf("\033[H");
+            afficher(tabJeu, largeur, longueur);
+            vivreEtMourir(tabTemp, tabJeu, largeur, longueur);
+        }
+    
+    
+        Libere(tabJeu, largeur, longueur);
+    }
+    else if(nombreDeTours == -1)
+    {
+        while (1)
+        {
+            copyTab(tabTemp, tabJeu, largeur, longueur);
+            sleep(1);
+            printf("\033[2J");
+            printf("\033[H");
+            afficher(tabJeu, largeur, longueur);
+            vivreEtMourir(tabTemp, tabJeu, largeur, longueur);
+        }
+    
+    
+        Libere(tabJeu, largeur, longueur);
     }
     
-    
-    Libere(tabJeu, largeur, longueur);
 
     return 0;
 }
