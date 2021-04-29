@@ -152,16 +152,22 @@ void Tours(int* nombreDeTours)              // Pour savoir le nombre de tours
     printf("Tapez le numero de votre choix : ");
     scanf("%d", &choix);
 
-    if(choix == 1)
+
+    switch (choix)
     {
+    case 1:
         printf("\nTapez combien de tours : ");
         scanf("%d", &n);
         *nombreDeTours = n;
-    }
-    else if(choix == 2)
+        break;
+    
+    case 2: 
         *nombreDeTours = 0;
-    else
+        break;
+    default:
         *nombreDeTours = -1;
+        break;
+    }
 }
 
 
