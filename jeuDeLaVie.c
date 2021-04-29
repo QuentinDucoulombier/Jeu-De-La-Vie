@@ -143,16 +143,16 @@ void copyTab(int** tab, int** tab2, int largeur, int longueur)
 void Tours(int* nombreDeTours)              // Pour savoir le nombre de tours
 {
     int choix;
-    char* nom;
+    char* prenom;
     int n;
-    
+
     printf("Quel est votre nom? \n");
-    scanf("%s", nom);
+    scanf("%s", prenom);
 
     printf("Bonjour, %s ! Le jeu vous propose les 3 choix suivants :\n"  
     "   1 - Choisir au prealable le nombre de tours\n"  
     "   2 - Arreter le jeu quand les cellules se sont stabilisees\n"  
-    "   3 - Jouer autant que vous le souhaitez et arreter le jeu manuellement avec Ctrl+C\n\n", nom);
+    "   3 - Jouer autant que vous le souhaitez et arreter le jeu manuellement avec Ctrl+C\n\n", prenom);
 
     printf("Tapez le numero de votre choix : ");
     scanf("%d", &choix);
