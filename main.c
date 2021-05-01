@@ -1,68 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 #include <unistd.h>
-#include "jeuDeLaVie.h"
-
-
-
+#include "file1.h"
 
 int main()
 {
-    int largeur = 20;
-    int longueur = 60;
-    int nombreDeTours;
-    int k = 0;
+    int lire;
+    scanf("%d", &lire);
+    int lignes = lire;
+    scanf("%d", &lire);
+    int colonnes = lire;
 
-    Tours(&nombreDeTours);
+    int** matrice1 = allouer(lignes, colonnes);
+    int** matrice2 = allouer(lignes, colonnes);
 
-    int **tabJeu = Allouer(largeur, longueur);
-    int **tabTemp = Allouer(largeur, longueur); 
+    initialiser(matrice1, lignes, colonnes);
 
-    Initialisation(tabJeu, largeur, longueur);
-    Initialisation(tabTemp, largeur, longueur);
+    scanf("%d", &lire);
+    int nombreDeTours = lire;
+    scanf("%d", &lire);
+    int torique = lire;
 
-    tabJeu[15][4] = 1;
-    tabJeu[14][5] = 1;
-    tabJeu[14][6] = 1;
-    tabJeu[15][6] = 1;
-    tabJeu[16][6] = 1;
-
-    
-
-    printf("\nLe jeu va commencer !! \nAppuyez sur ctrl+C pour arrêter le jeu. \n\n\nC'EST PARTI !");
+    printf("\n\nLe jeu va commencer dans 1 seconde !\n");
     sleep(1);
 
-    if(nombreDeTours > 0)
+    if(torique == 0)
     {
-        for(int i = 0; i < nombreDeTours; i++)
+        while(nombreDeTours)
         {
-            copyTab(tabTemp, tabJeu, largeur, longueur);
-            sleep(1);
             printf("\033[2J");
             printf("\033[H");
-            afficher(tabJeu, largeur, longueur);
-            MourirEtVivre2(tabTemp, tabJeu, largeur, longueur);
+            afficher(matrice1, lignes, colonnes);
+            copyTab(matrice2, matrice1, lignes, colonnes);
+            vivreFermee(matrice1, matrice2, lignes, colonnes);
+            usleep(100000);
         }
-    
-    
-        Libere(tabJeu, largeur, longueur);
-    }
-    else if(nombreDeTours == -1)
-    {
-        while (1)
+    }else{
+        while(nombreDeTours)
         {
-            copyTab(tabTemp, tabJeu, largeur, longueur);
-            sleep(1);
             printf("\033[2J");
             printf("\033[H");
-            afficher(tabJeu, largeur, longueur);
-            MourirEtVivre2(tabTemp, tabJeu, largeur, longueur);
+            afficher(matrice1, lignes, colonnes);
+            copyTab(matrice2, matrice1, lignes, colonnes);
+            vivreTorique(matrice1, matrice2, lignes, colonnes);
+            usleep(100000);
         }
-    
-    
-        Libere(tabJeu, largeur, longueur);
     }
-    
+
+    Libere (matrice1, lignes, colonnes);
+    Libere (matrice2, lignes, colonnes);
 
     return 0;
 }
