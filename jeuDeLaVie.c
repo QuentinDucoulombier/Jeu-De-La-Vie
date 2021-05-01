@@ -205,7 +205,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][j+1] == TRUE)
                         temp++;
                 }
-                else if(i == largeur-1 && (j != 0 && j != longueur-1))
+                
+                if(i == largeur-1 && (j != 0 && j != longueur-1))
                 {
                     if(tab[i-1][j-1] == TRUE)
                         temp++;
@@ -224,7 +225,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[0][j+1] == TRUE)
                         temp++;
                 }
-                else if(j == 0 && (i != 0 && i != largeur-1))
+                
+                if(j == 0 && (i != 0 && i != largeur-1))
                 {
                     if(tab[i-1][longueur-1] == TRUE)
                         temp++;
@@ -243,7 +245,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][j+1] == TRUE)
                         temp++;
                 }
-                else if(j == longueur-1 && (i !=0 && i != largeur-1))
+                
+                if(j == longueur-1 && (i !=0 && i != largeur-1))
                 {
                     if(tab[i-1][j-1] == TRUE)
                         temp++;
@@ -262,7 +265,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][0] == TRUE)
                         temp++;
                 }
-                else if(i == 0 && j == 0)
+                
+                if(i == 0 && j == 0)
                 {
                     if(tab[largeur-1][longueur-1] == TRUE)
                         temp++;
@@ -281,7 +285,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][j+1] == TRUE)
                         temp++;
                 }
-                else if(i == largeur-1 && j == 0)
+                
+                if(i == largeur-1 && j == 0)
                 {
                     if(tab[i-1][longueur-1] == TRUE)
                         temp++;
@@ -300,7 +305,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[0][j+1] == TRUE)
                         temp++;
                 }
-                else if(i == 0 && j == longueur-1)
+
+                if(i == 0 && j == longueur-1)
                 {
                     if(tab[largeur-1][j-1] == TRUE)
                         temp++;
@@ -319,7 +325,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][0] == TRUE)
                         temp++;
                 }
-                else if(i == largeur-1 && j == longueur-1)
+                
+                if(i == largeur-1 && j == longueur-1)
                 {   
                     if(tab[i-1][j-1] == TRUE)
                         temp++;
@@ -338,7 +345,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[0][0] == TRUE)
                         temp++;
                 }
-                else
+
+                if(temp == 0)
                 {
                     if(tab[i-1][j-1] == TRUE)
                         temp++;
@@ -383,7 +391,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][j+1] == TRUE)
                         temp++;
                 }
-                else if(i == largeur-1 && (j != 0 && j != longueur-1))
+                
+                if(i == largeur-1 && (j != 0 && j != longueur-1))
                 {
                     if(tab[i-1][j-1] == TRUE)
                         temp++;
@@ -402,7 +411,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[0][j+1] == TRUE)
                         temp++;
                 }
-                else if(j == 0 && (i != 0 && i != largeur-1))
+                
+                if(j == 0 && (i != 0 && i != largeur-1))
                 {
                     if(tab[i-1][longueur-1] == TRUE)
                         temp++;
@@ -421,7 +431,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][j+1] == TRUE)
                         temp++;
                 }
-                else if(j == longueur-1 && (i !=0 && i != largeur-1))
+                
+                if(j == longueur-1 && (i !=0 && i != largeur-1))
                 {
                     if(tab[i-1][j-1] == TRUE)
                         temp++;
@@ -440,7 +451,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][0] == TRUE)
                         temp++;
                 }
-                else if(i == 0 && j == 0)
+                
+                if(i == 0 && j == 0)
                 {
                     if(tab[largeur-1][longueur-1] == TRUE)
                         temp++;
@@ -459,7 +471,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][j+1] == TRUE)
                         temp++;
                 }
-                else if(i == largeur-1 && j == 0)
+                
+                if(i == largeur-1 && j == 0)
                 {
                     if(tab[i-1][longueur-1] == TRUE)
                         temp++;
@@ -478,7 +491,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[0][j+1] == TRUE)
                         temp++;
                 }
-                else if(i == 0 && j == longueur-1)
+                
+                if(i == 0 && j == longueur-1)
                 {
                     if(tab[largeur-1][j-1] == TRUE)
                         temp++;
@@ -497,7 +511,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[i+1][0] == TRUE)
                         temp++;
                 }
-                else if(i == largeur-1 && j == longueur-1)
+                
+                if(i == largeur-1 && j == longueur-1)
                 {   
                     if(tab[i-1][j-1] == TRUE)
                         temp++;
@@ -516,7 +531,8 @@ void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
                     if(tab[0][0] == TRUE)
                         temp++;
                 }
-                else
+                
+                if(temp == 0)
                 {
                     if(tab[i-1][j-1] == TRUE)
                         temp++;
