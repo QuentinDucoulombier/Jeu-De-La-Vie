@@ -41,7 +41,7 @@ int main()
             printf("\033[2J");
             printf("\033[H");
             afficher(tabJeu, largeur, longueur);
-            vivreEtMourir(tabTemp, tabJeu, largeur, longueur);
+            MourirEtVivre2(tabTemp, tabJeu, largeur, longueur);
         }
     
     
@@ -56,7 +56,7 @@ int main()
             printf("\033[2J");
             printf("\033[H");
             afficher(tabJeu, largeur, longueur);
-            vivreEtMourir(tabTemp, tabJeu, largeur, longueur);
+            MourirEtVivre2(tabTemp, tabJeu, largeur, longueur);
         }
     
     

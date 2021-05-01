@@ -8,6 +8,7 @@ void afficher(int** tab, int largeur, int longueur);
 void Libere (int** tab, int largeur, int longueur);
 void copyTab(int** tab, int** tab2, int largeur, int longueur);
 void vivreEtMourir(int** tab, int** tab2, int largeur, int longueur);
+void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur);
 void Tours(int* nombreDeTours);
 
 #endif

@@ -176,4 +176,369 @@ void Tours(int* nombreDeTours)              // Pour savoir le nombre de tours
     }
 }
 
+void MourirEtVivre2(int** tab, int** tab2, int largeur, int longueur)
+{
+    for(int i = 0; i < largeur; i++)
+    {
+        for(int j = 0; j < longueur; j++)
+        {
+            int temp = 0;
 
+            if(tab[i][j] == TRUE)
+            {
+                if(i == 0 && (j != 0 && j != longueur-1))
+                {
+                    if(tab[largeur-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][j+1] == TRUE)
+                        temp++;
+                }
+                else if(i == largeur-1 && (j != 0 && j != longueur-1))
+                {
+                    if(tab[i-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[0][j-1] == TRUE)
+                        temp++;
+                    if(tab[0][j] == TRUE)
+                        temp++;
+                    if(tab[0][j+1] == TRUE)
+                        temp++;
+                }
+                else if(j == 0 && (i != 0 && i != largeur-1))
+                {
+                    if(tab[i-1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[i+1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][j+1] == TRUE)
+                        temp++;
+                }
+                else if(j == longueur-1 && (i !=0 && i != largeur-1))
+                {
+                    if(tab[i-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][0] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][0] == TRUE)
+                        temp++;
+                    if(tab[i+1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][0] == TRUE)
+                        temp++;
+                }
+                else if(i == 0 && j == 0)
+                {
+                    if(tab[largeur-1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[i+1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][j+1] == TRUE)
+                        temp++;
+                }
+                else if(i == largeur-1 && j == 0)
+                {
+                    if(tab[i-1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[0][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[0][j] == TRUE)
+                        temp++;
+                    if(tab[0][j+1] == TRUE)
+                        temp++;
+                }
+                else if(i == 0 && j == longueur-1)
+                {
+                    if(tab[largeur-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][0] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][0] == TRUE)
+                        temp++;
+                    if(tab[i+1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][0] == TRUE)
+                        temp++;
+                }
+                else if(i == largeur-1 && j == longueur-1)
+                {   
+                    if(tab[i-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][0] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][0] == TRUE)
+                        temp++;
+                    if(tab[0][j-1] == TRUE)
+                        temp++;
+                    if(tab[0][j] == TRUE)
+                        temp++;
+                    if(tab[0][0] == TRUE)
+                        temp++;
+                }
+                else
+                {
+                    if(tab[i-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][j+1] == TRUE)
+                        temp++;
+                }
+
+                if(temp < 2 || temp > 3) //meurt de sous/sur population
+                    tab2[i][j] = FALSE;
+            }
+
+            if(tab[i][j] == TRUE)
+            {
+                if(i == 0 && (j != 0 && j != longueur-1))
+                {
+                    if(tab[largeur-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][j+1] == TRUE)
+                        temp++;
+                }
+                else if(i == largeur-1 && (j != 0 && j != longueur-1))
+                {
+                    if(tab[i-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[0][j-1] == TRUE)
+                        temp++;
+                    if(tab[0][j] == TRUE)
+                        temp++;
+                    if(tab[0][j+1] == TRUE)
+                        temp++;
+                }
+                else if(j == 0 && (i != 0 && i != largeur-1))
+                {
+                    if(tab[i-1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[i+1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][j+1] == TRUE)
+                        temp++;
+                }
+                else if(j == longueur-1 && (i !=0 && i != largeur-1))
+                {
+                    if(tab[i-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][0] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][0] == TRUE)
+                        temp++;
+                    if(tab[i+1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][0] == TRUE)
+                        temp++;
+                }
+                else if(i == 0 && j == 0)
+                {
+                    if(tab[largeur-1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[i+1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][j+1] == TRUE)
+                        temp++;
+                }
+                else if(i == largeur-1 && j == 0)
+                {
+                    if(tab[i-1][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[0][longueur-1] == TRUE)
+                        temp++;
+                    if(tab[0][j] == TRUE)
+                        temp++;
+                    if(tab[0][j+1] == TRUE)
+                        temp++;
+                }
+                else if(i == 0 && j == longueur-1)
+                {
+                    if(tab[largeur-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][j] == TRUE)
+                        temp++;
+                    if(tab[largeur-1][0] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][0] == TRUE)
+                        temp++;
+                    if(tab[i+1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][0] == TRUE)
+                        temp++;
+                }
+                else if(i == largeur-1 && j == longueur-1)
+                {   
+                    if(tab[i-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][0] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][0] == TRUE)
+                        temp++;
+                    if(tab[0][j-1] == TRUE)
+                        temp++;
+                    if(tab[0][j] == TRUE)
+                        temp++;
+                    if(tab[0][0] == TRUE)
+                        temp++;
+                }
+                else
+                {
+                    if(tab[i-1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i-1][j] == TRUE)
+                        temp++;
+                    if(tab[i-1][j+1] == TRUE)
+                        temp++;
+                    if(tab[i][j-1] == TRUE)
+                        temp++;
+                    if(tab[i][j+1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j-1] == TRUE)
+                        temp++;
+                    if(tab[i+1][j] == TRUE)
+                        temp++;
+                    if(tab[i+1][j+1] == TRUE)
+                        temp++;
+                }
+
+                if(temp == 3) //meurt de sous/sur population
+                    tab2[i][j] = TRUE;
+            }
+        }
+    }
+}
