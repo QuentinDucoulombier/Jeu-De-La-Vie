@@ -27,14 +27,15 @@ int main()
 
     if(torique == 0)
     {
-        while(nombreDeTours)
+        while(1)
         {
+            copyMatrice(matrice2, matrice1, lignes, colonnes);
+            usleep(100000);
             printf("\033[2J");
             printf("\033[H");
             afficher(matrice1, lignes, colonnes);
-            copyMatrice(matrice2, matrice1, lignes, colonnes);
-            vivreFermee(matrice1, matrice2, lignes, colonnes);
-            usleep(100000);
+            vivreFermee(matrice2, matrice1, lignes, colonnes);
+            
         }
     }else{
         while(nombreDeTours)

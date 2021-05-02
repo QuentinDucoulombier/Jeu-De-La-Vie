@@ -1,5 +1,5 @@
 exe: file1.o main.o
-	gcc file1.o main.o -o exe
+	gcc -Wall file1.o main.o -o exe
 
 jeuDeLaVie.o: file1.c file1.h
 	gcc -c file1.c  -o file1.o

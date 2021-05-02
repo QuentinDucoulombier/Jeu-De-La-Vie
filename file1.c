@@ -70,7 +70,6 @@ void vivreFermee(int** matrice, int** matrice2, int lignes, int colonnes)
         {
             int temp = 0;
             if(matrice[i][j] == 1)
-            
             {
                 if(matrice[i-1][j-1] == 1)
                     temp++;
@@ -186,7 +185,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[i+1][j+1] == 1)
                     temp++;
             }
-            else if(j == colonnes-1 && (i !=0 && i != lignes-1))
+             else if(j == colonnes-1 && (i !=0 && i != lignes-1))
             {
                 if(matrice[i-1][j-1] == 1)
                     temp++;
@@ -223,7 +222,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                     temp++;
                 if(matrice[i+1][j+1] == 1)
                     temp++;
-            }
+            }        
             else if(i == lignes-1 && j == 0)
             {
                 if(matrice[i-1][colonnes-1] == 1)

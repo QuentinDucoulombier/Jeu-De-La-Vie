@@ -16,7 +16,8 @@
 
 int** Allouer(int largeur, int longueur)
 {
-    int** tab = malloc(largeur *sizeof(int*));
+    int** tab =NULL
+    tab = malloc(largeur *sizeof(int*));
     for (int i = 0; i < largeur; i++)
     {
         tab[i]= malloc(longueur * sizeof(int));
