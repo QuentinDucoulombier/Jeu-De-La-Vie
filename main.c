@@ -6,7 +6,7 @@
 
 int main()
 {
-    int lire;
+    int lire = 0;
     scanf("%d", &lire);
     int lignes = lire;
     scanf("%d", &lire);
@@ -32,7 +32,7 @@ int main()
             printf("\033[2J");
             printf("\033[H");
             afficher(matrice1, lignes, colonnes);
-            copyTab(matrice2, matrice1, lignes, colonnes);
+            copyMatrice(matrice2, matrice1, lignes, colonnes);
             vivreFermee(matrice1, matrice2, lignes, colonnes);
             usleep(100000);
         }
@@ -42,7 +42,7 @@ int main()
             printf("\033[2J");
             printf("\033[H");
             afficher(matrice1, lignes, colonnes);
-            copyTab(matrice2, matrice1, lignes, colonnes);
+            copyMatrice(matrice2, matrice1, lignes, colonnes);
             vivreTorique(matrice1, matrice2, lignes, colonnes);
             usleep(100000);
         }
