@@ -8,9 +8,9 @@ int main()
 {
     int lire = 0;
     scanf("%d", &lire);
-    int lignes = lire;
+    int lignes = lire + 2;
     scanf("%d", &lire);
-    int colonnes = lire;
+    int colonnes = lire + 2;
 
     int** matrice1 = allouer(lignes, colonnes);
     int** matrice2 = allouer(lignes, colonnes);
@@ -30,12 +30,11 @@ int main()
         while(1)
         {
             copyMatrice(matrice2, matrice1, lignes, colonnes);
-            usleep(100000);
+            usleep(300000);
             printf("\033[2J");
             printf("\033[H");
             afficher(matrice1, lignes, colonnes);
             vivreFermee(matrice2, matrice1, lignes, colonnes);
-            
         }
     }else{
         while(nombreDeTours)
@@ -44,7 +43,7 @@ int main()
             printf("\033[H");
             afficher(matrice1, lignes, colonnes);
             copyMatrice(matrice2, matrice1, lignes, colonnes);
-            vivreTorique(matrice1, matrice2, lignes, colonnes);
+            vivreTorique(matrice2, matrice1, lignes, colonnes);
             usleep(100000);
         }
     }

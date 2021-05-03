@@ -21,12 +21,17 @@ int** allouer(int lignes, int colonnes)
 void initialiser(int** matrice, int lignes, int colonnes)
 {
     int lire;
-    for(int i = 0; i < lignes; i++)
+    for(int i = 0; i < lignes - 2; i++)
     {
-        for(int j = 0; j < colonnes; j++)
+        for(int j = 0; j < colonnes - 2; j++)
         {
             scanf("%d", &lire);
-            matrice[i][j] = lire;
+            matrice[i + 1][j + 1] = lire;
+            /*
+            matrice[0][j] = 2;
+            matrice[lignes][j] = 2;
+            matrice[i][0] = 2;
+            matrice[i][colonnes] = 2;*/
         }   
     }
 }
@@ -155,7 +160,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[i-1][j+1] == 1)
                     temp++;
                 if(matrice[i][j-1] == 1)
-                        temp++;
+                    temp++;
                 if(matrice[i][j+1] == 1)
                     temp++;
                 if(matrice[0][j-1] == 1)
@@ -185,7 +190,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[i+1][j+1] == 1)
                     temp++;
             }
-             else if(j == colonnes-1 && (i !=0 && i != lignes-1))
+            else if(j == colonnes-1 && (i !=0 && i != lignes-1))
             {
                 if(matrice[i-1][j-1] == 1)
                     temp++;
