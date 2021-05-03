@@ -30,7 +30,7 @@ int main()
         while(1)
         {
             copyMatrice(matrice2, matrice1, lignes, colonnes);
-            usleep(300000);
+            usleep(100000);
             printf("\033[2J");
             printf("\033[H");
             afficher(matrice1, lignes, colonnes);
