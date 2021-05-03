@@ -27,20 +27,15 @@ void initialiser(int** matrice, int lignes, int colonnes)
         {
             scanf("%d", &lire);
             matrice[i + 1][j + 1] = lire;
-            /*
-            matrice[0][j] = 2;
-            matrice[lignes][j] = 2;
-            matrice[i][0] = 2;
-            matrice[i][colonnes] = 2;*/
         }   
     }
 }
 
 void afficher(int** matrice, int lignes, int colonnes)
 {
-    for(int i = 0; i < lignes; i++)
+    for(int i = 1; i < lignes - 1; i++)
     {
-        for(int j = 0; j < colonnes; j++)
+        for(int j = 1; j < colonnes - 1; j++)
         {
             if(matrice[i][j] == 1)
             {
