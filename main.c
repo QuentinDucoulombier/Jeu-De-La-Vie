@@ -44,7 +44,7 @@ int main()
             afficher(matrice1, lignes, colonnes);
             copyMatrice(matrice2, matrice1, lignes, colonnes);
             vivreTorique(matrice2, matrice1, lignes, colonnes);
-            usleep(100000);
+            usleep(400000);
         }
     }
 
