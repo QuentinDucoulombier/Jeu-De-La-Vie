@@ -27,7 +27,7 @@ int main()
 
     if(torique == 0)
     {
-        while(1)
+        for(int i = 0; i < nombreDeTours; i++)
         {
             copyMatrice(matrice2, matrice1, lignes, colonnes);
             usleep(100000);
@@ -37,7 +37,7 @@ int main()
             vivreFermee(matrice2, matrice1, lignes, colonnes);
         }
     }else{
-        while(nombreDeTours)
+        for(int i = 0; i < nombreDeTours; i++)
         {
             printf("\033[2J");
             printf("\033[H");
@@ -47,6 +47,7 @@ int main()
             usleep(400000);
         }
     }
+    printf("Vous avez fait: %d tours\n", nombreDeTours);
 
     Libere (matrice1, lignes, colonnes);
     Libere (matrice2, lignes, colonnes);
