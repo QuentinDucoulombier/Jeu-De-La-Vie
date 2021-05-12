@@ -62,6 +62,28 @@ void Libere (int** matrice, int lignes, int colonnes)
     free(matrice);
 }
 
+int voisinSansBord(int** matrice, int i, int j, int temp)
+{
+    if(matrice[i-1][j-1] == 1)
+        temp++;
+    if(matrice[i-1][j] == 1)
+        temp++;
+    if(matrice[i-1][j+1] == 1)
+        temp++;
+    if(matrice[i][j-1] == 1)
+        temp++;
+    if(matrice[i][j+1] == 1)
+        temp++;
+    if(matrice[i+1][j-1] == 1)
+        temp++;
+    if(matrice[i+1][j] == 1)
+        temp++;
+    if(matrice[i+1][j+1] == 1)
+        temp++;
+
+    return(temp);
+}
+
 void vivreFermee(int** matrice, int** matrice2, int lignes, int colonnes)
 {
     for(int i = 1; i < lignes - 1; i++)
@@ -69,54 +91,23 @@ void vivreFermee(int** matrice, int** matrice2, int lignes, int colonnes)
         for(int j = 1; j < colonnes - 1; j++)
         {
             int temp = 0;
+            temp = voisinSansBord(matrice, i, j, temp);
+            
             if(matrice[i][j] == 1)
             {
-                if(matrice[i-1][j-1] == 1)
-                    temp++;
-                if(matrice[i-1][j] == 1)
-                    temp++;
-                if(matrice[i-1][j+1] == 1)
-                    temp++;
-                if(matrice[i][j-1] == 1)
-                    temp++;
-                if(matrice[i][j+1] == 1)
-                    temp++;
-                if(matrice[i+1][j-1] == 1)
-                    temp++;
-                if(matrice[i+1][j] == 1)
-                    temp++;
-                if(matrice[i+1][j+1] == 1)
-                    temp++;
-
                 if(temp < 2 || temp > 3) 
                     matrice2[i][j] = 0;
             }
 
             if(matrice[i][j] == 0)
             {
-                if(matrice[i-1][j-1] == 1)
-                    temp++;
-                if(matrice[i-1][j] == 1)
-                    temp++;
-                if(matrice[i-1][j+1] == 1)
-                    temp++;
-                if(matrice[i][j-1] == 1)
-                    temp++;
-                if(matrice[i][j+1] == 1)
-                    temp++;
-                if(matrice[i+1][j-1] == 1)
-                    temp++;
-                if(matrice[i+1][j] == 1)
-                    temp++;
-                if(matrice[i+1][j+1] == 1)
-                    temp++;
-                
                 if(temp == 3)   
                     matrice2[i][j] = 1;
             }
         }
     }
 }
+
 
 void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
 {
@@ -281,24 +272,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
             }
 
             if(temp == 0)
-            {
-               if(matrice[i-1][j-1] == 1)
-                    temp++;
-                if(matrice[i-1][j] == 1)
-                    temp++;
-                if(matrice[i-1][j+1] == 1)
-                    temp++;
-                if(matrice[i][j-1] == 1)
-                    temp++;
-                if(matrice[i][j+1] == 1)
-                    temp++;
-                if(matrice[i+1][j-1] == 1)
-                    temp++;
-                if(matrice[i+1][j] == 1)
-                    temp++;
-                if(matrice[i+1][j+1] == 1)
-                    temp++;
-            }
+                temp = voisinSansBord(matrice, i, j, temp);
             
             if(matrice[i][j] == 1)
             {
