@@ -35,7 +35,6 @@ int main()
             printf("\033[H");
             afficher(matrice1, lignes, colonnes);
             vivreFermee(matrice2, matrice1, lignes, colonnes);
-            printf("%d\n", i);
         }
     }else{
         for(int i = 0; i < nombreDeTours; i++)
