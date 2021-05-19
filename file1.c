@@ -39,12 +39,12 @@ void afficher(int** matrice, int lignes, int colonnes)
         {
             if(matrice[i][j] == 1)
             {
-                printf("\033[0;34m");
+                printf("\033[0;30m");
                 printf(" ■");
             }
             else
             {
-                printf("\033[0;31m");
+                printf("\033[0;37m");
                 printf(" ■");
             }
         }
