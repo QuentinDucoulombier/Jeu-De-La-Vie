@@ -49,8 +49,8 @@ int main()
     }
     printf("Vous avez fait: %d tours\n", nombreDeTours);
 
-    Libere (matrice1, lignes, colonnes);
-    Libere (matrice2, lignes, colonnes);
+    Libere (matrice1, lignes);
+    Libere (matrice2, lignes);
 
     return 0;
 }

@@ -53,13 +53,14 @@ void afficher(int** matrice, int lignes, int colonnes)
 }
 
 
-void Libere (int** matrice, int lignes, int colonnes)
+void Libere (int** matrice, int lignes)
 {
     for (int i = 0; i < lignes; i++)
     {
         free(matrice[i]);
     }
     free(matrice);
+    matrice = NULL;
 }
 
 int voisinSansBord(int** matrice, int i, int j, int temp)
