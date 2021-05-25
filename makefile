@@ -1,10 +1,10 @@
-exe: file1.o main.o
-	gcc -Wall file1.o main.o -o exe
+exe: fonction.o main.o
+	gcc -Wall fonction.o main.o -o exe
 
-jeuDeLaVie.o: file1.c file1.h
-	gcc -c file1.c  -o file1.o
+fonction.o: fonction.c fonction.h
+	gcc -c fonction.c  -o fonction.o
 
-main.o: main.c file1.h
+main.o: main.c fonction.h
 	gcc -c main.c -o main.o
 
 clear: exe

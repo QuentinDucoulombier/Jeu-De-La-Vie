@@ -4,8 +4,6 @@
 #include <unistd.h>
 #include "fonction.h"
 
-
-
 int** allouer(int lignes, int colonnes)
 {
     int** matrice = NULL;
@@ -51,7 +49,6 @@ void afficher(int** matrice, int lignes, int colonnes)
         printf("\n");
     }
 }
-
 
 void Libere (int** matrice, int lignes)
 {
@@ -109,7 +106,6 @@ void vivreFermee(int** matrice, int** matrice2, int lignes, int colonnes)
     }
 }
 
-
 void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
 {
     int temp;
@@ -119,7 +115,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
         {
             temp = 0;
             
-            if(i == 1 && (j != 1 && j != colonnes-2)) //
+            if(i == 1 && (j != 1 && j != colonnes-2)) //cas en haut a droite
             {
                 if(matrice[lignes-2][j-1] == 1)
                     temp++;
