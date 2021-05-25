@@ -1,5 +1,5 @@
-#ifndef __FILE1__
-#define __FILE1__
+#ifndef _FONCTION_H_
+#define _FONCTION_H_
 
 int** allouer(int lignes, int colonnes);
 void initialiser(int** matrice, int lignes, int colonnes);

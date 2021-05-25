@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 #include <unistd.h>
-#include "file1.h"
+#include "fonction.h"
 
 
 
