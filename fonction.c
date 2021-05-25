@@ -115,7 +115,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
         {
             temp = 0;
             
-            if(i == 1 && (j != 1 && j != colonnes-2)) //cas en haut a droite
+            if(i == 1 && (j != 1 && j != colonnes-2)) //cas en haut
             {
                 if(matrice[lignes-2][j-1] == 1)
                     temp++;
@@ -134,7 +134,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[i+1][j+1] == 1)
                     temp++;
             }
-            else if(i == lignes-2 && (j != 1 && j != colonnes-2))
+            else if(i == lignes-2 && (j != 1 && j != colonnes-2)) //cas en bas
             {
                 if(matrice[i-1][j-1] == 1)
                     temp++;
@@ -153,7 +153,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[1][j+1] == 1)
                     temp++;
             }
-            else if(j == 1 && (i != 1 && i != lignes-2))
+            else if(j == 1 && (i != 1 && i != lignes-2)) //cas a gauche
             {
                 if(matrice[i-1][colonnes-2] == 1)
                     temp++;
@@ -172,7 +172,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[i+1][j+1] == 1)
                     temp++;
             }
-            else if(j == colonnes-2 && (i != 1 && i != lignes-2))
+            else if(j == colonnes-2 && (i != 1 && i != lignes-2)) //cas a droite
             {
                 if(matrice[i-1][j-1] == 1)
                     temp++;
@@ -191,7 +191,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[i+1][1] == 1)
                     temp++;
             }
-            else if(i == 1 && j == 1)
+            else if(i == 1 && j == 1) //cas en haut a gauche
             {
                 if(matrice[lignes-2][colonnes-2] == 1)
                     temp++;
@@ -210,7 +210,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[i+1][j+1] == 1)
                     temp++;
             }        
-            else if(i == lignes-2 && j == 1)
+            else if(i == lignes-2 && j == 1) //cas en bas a gauche
             {
                 if(matrice[i-1][colonnes-2] == 1)
                     temp++;
@@ -229,7 +229,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[1][j+1] == 1)
                     temp++;
             }
-            else if(i == 1 && j == colonnes-2)
+            else if(i == 1 && j == colonnes-2) //cas en haut a droite
             {
                 if(matrice[lignes-2][j-1] == 1)
                     temp++;
@@ -248,7 +248,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes)
                 if(matrice[i+1][1] == 1)
                     temp++;
             }
-            else if(i == lignes-2 && j == colonnes-2)
+            else if(i == lignes-2 && j == colonnes-2) //cas en bas a droite
             {
                 if(matrice[i-1][j-1] == 1)
                     temp++;
