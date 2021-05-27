@@ -1,3 +1,4 @@
+/* Inclusion des librairies */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -93,14 +94,14 @@ void vivreFermee(int** matrice, int** matrice2, int lignes, int colonnes)
             
             if(matrice[i][j] == 1)
             {
-                if(temp < 2 || temp > 3) 
+                if(temp < 2 || temp > 3) //cas de mort de la cellule par sous ou sur population
                     matrice2[i][j] = 0;
             }
 
             if(matrice[i][j] == 0)
             {
-                if(temp == 3)   
-                    matrice2[i][j] = 1;
+                if(temp == 3)   //cas de naissance de la cellule
+                    matrice2[i][j] = 1; 
             }
         }
     }
