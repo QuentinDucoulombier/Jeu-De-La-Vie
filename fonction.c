@@ -34,7 +34,7 @@ int** allouer(int lignes, int colonnes)
 void initialiser(int** matrice, int lignes, int colonnes)
 {
     int lire;
-    for(int i = 0; i < lignes - 2; i++)
+    for(int i = 0; i < lignes - 2; i++) 
     {
         for(int j = 0; j < colonnes - 2; j++)
         {
