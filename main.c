@@ -1,3 +1,17 @@
+/*!
+    \file main.c
+    \author Lucas Thu Ping One
+    \author Quentin Ducoulombier
+    \author Omar Benzeroual
+    \date 24/04/2021
+    \brief fichier Main du projet qui appel tout les fonctions
+    \remarks Aucune
+
+    Description détaillée
+
+*/
+
+/* Inclusion des librairies */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>

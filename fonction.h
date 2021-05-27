@@ -3,7 +3,7 @@
     \author Lucas Thu Ping One
     \author Quentin Ducoulombier
     \author Omar Benzeroual
-    \date 30/05/2021
+    \date 24/04/2021
     \brief fichier d'en-têtes pour fonction.c
     \remarks Aucune
 
@@ -22,7 +22,7 @@
     \author Lucas Thu Ping One
     \author Quentin Ducoulombier
     \author Omar Benzeroual
-    \date 30/05/2021
+    \date 24/04/2021
     \param lignes le nombre de lignes rentrées dans le .txt de la figure
     \param colonnes le nombre de colonnes rentrées dans le .txt de la figure
     \return un tableau de pointeur 2D d'entier de la taille de lignes * colonnes
@@ -36,7 +36,7 @@ int** allouer(int lignes, int colonnes);
     \author Lucas Thu Ping One
     \author Quentin Ducoulombier
     \author Omar Benzeroual
-    \date 30/05/2021
+    \date 24/04/2021
     \param matrice le tableau dynamique cree par la fonction precedente
     \param lignes le nombre de lignes rentrées dans le .txt de la figure
     \param colonnes le nombre de colonnes rentrées dans le .txt de la figure
@@ -50,7 +50,7 @@ void initialiser(int** matrice, int lignes, int colonnes);
     \author Lucas Thu Ping One
     \author Quentin Ducoulombier
     \author Omar Benzeroual
-    \date 30/05/2021
+    \date 24/04/2021
     \param matrice le tableau dynamique cree par la fonction allouer et initialiser par la procedure du meme nom
     \param lignes le nombre de lignes rentrées dans le .txt de la figure
     \param colonnes le nombre de colonnes rentrées dans le .txt de la figure
@@ -64,7 +64,7 @@ void afficher(int** matrice, int lignes, int colonnes);
     \author Lucas Thu Ping One
     \author Quentin Ducoulombier
     \author Omar Benzeroual
-    \date 30/05/2021
+    \date 24/04/2021
     \param matrice le tableau dynamique cree par la fonction allouer et initialiser par la procedure du meme nom
     \param lignes le nombre de lignes rentrées dans le .txt de la figure
     \brief libere le tableau
@@ -77,7 +77,7 @@ void Libere (int** matrice, int lignes);
     \author Lucas Thu Ping One
     \author Quentin Ducoulombier
     \author Omar Benzeroual
-    \date 30/05/2021
+    \date 24/04/2021
     \param matrice le tableau dynamique cree par la fonction allouer et initialiser par la procedure du meme nom
     \param i variable de la premiere boucle qui va de 1 a ligne-1 dans la fonction vivreFermee
     \param j variable de la seconde boucle qui va de 1 a colonne-1 dans la fonction vivreFermee
@@ -93,7 +93,7 @@ int voisinSansBord(int** matrice, int i, int j, int temp);
     \author Lucas Thu Ping One
     \author Quentin Ducoulombier
     \author Omar Benzeroual
-    \date 30/05/2021
+    \date 24/04/2021
     \param matrice le tableau dynamique cree par la fonction allouer et initialiser par la procedure du meme nom
     \param matrice2 un tableau temporaire qui permet de modifier la matrice (qui est ensuite copier dans la fonction copytab) 
     \param lignes le nombre de lignes rentrées dans le .txt de la figure
@@ -108,7 +108,7 @@ void vivreFermee(int** matrice, int** matrice2, int lignes, int colonnes);
     \author Lucas Thu Ping One
     \author Quentin Ducoulombier
     \author Omar Benzeroual
-    \date 30/05/2021
+    \date 24/04/2021
     \param matrice le tableau dynamique cree par la fonction allouer et initialiser par la procedure du meme nom
     \param matrice2 un tableau temporaire qui permet de modifier la matrice (qui est ensuite copier dans la fonction copytab) 
     \param lignes le nombre de lignes rentrées dans le .txt de la figure
@@ -123,7 +123,7 @@ void vivreTorique(int** matrice, int** matrice2, int lignes, int colonnes);
     \author Lucas Thu Ping One
     \author Quentin Ducoulombier
     \author Omar Benzeroual
-    \date 30/05/2021
+    \date 24/04/2021
     \param matrice le tableau dynamique cree par la fonction allouer et initialiser par la procedure du meme nom
     \param matrice2 un tableau temporaire qui permet de modifier la matrice (qui est ensuite copier dans la fonction copytab) 
     \param lignes le nombre de lignes rentrées dans le .txt de la figure

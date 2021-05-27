@@ -1,3 +1,17 @@
+/*!
+    \file fonction.c
+    \author Lucas Thu Ping One
+    \author Quentin Ducoulombier
+    \author Omar Benzeroual
+    \date 30/05/2021
+    \brief fichier avec tout les fonction
+    \remarks Aucune
+
+    Description détaillée
+
+*/
+
+
 /* Inclusion des librairies */
 #include <stdio.h>
 #include <stdlib.h>
