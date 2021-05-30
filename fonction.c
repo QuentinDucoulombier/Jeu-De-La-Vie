@@ -7,7 +7,7 @@
     \brief fichier avec tout les fonction
     \remarks Aucune
 
-    Description détaillée
+    Description détaillée des fonctions et des procédures
 
 */
 

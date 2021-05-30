@@ -7,7 +7,7 @@
     \brief fichier d'en-têtes pour fonction.c
     \remarks Aucune
 
-    Description détaillée
+    Prototypage des fonctions et procédures.
 
 */
 
